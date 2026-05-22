@@ -149,10 +149,6 @@ function Nav({ lang, setLang, t }) {
             <button className={lang === "ja" ? "active" : ""} onClick={() => setLang("ja")}>JA</button>
             <button className={lang === "en" ? "active" : ""} onClick={() => setLang("en")}>EN</button>
           </div>
-          <a className="btn btn-primary" href="#download">
-            <Icon.ArrowRight width="14" height="14" />
-            {t.nav.download}
-          </a>
         </div>
       </div>
     </nav>
