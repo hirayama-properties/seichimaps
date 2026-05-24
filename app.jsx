@@ -178,7 +178,7 @@ function Hero({ t }) {
             </h1>
             <p className="hero-lede">{t.hero.lede}</p>
             <div className="hero-ctas" id="download">
-              <a className="btn-gplay" href="#" onClick={(e) => e.preventDefault()}>
+              <a className="btn-gplay" href="https://play.google.com/store/apps/details?id=com.seichimaps.app" target="_blank" rel="noopener noreferrer">
                 <Icon.GooglePlay className="gp-icon" />
                 <span className="gp-label">
                   <small>{t.hero.googlePlay}</small>
@@ -492,7 +492,7 @@ function FinalCta({ t }) {
         <h2 className="reveal">{t.finalCta.title}</h2>
         <p className="reveal" data-delay="1">{t.finalCta.lede}</p>
         <div className="hero-ctas reveal" data-delay="2">
-          <a className="btn-gplay" href="#" onClick={(e) => e.preventDefault()}>
+          <a className="btn-gplay" href="https://play.google.com/store/apps/details?id=com.seichimaps.app" target="_blank" rel="noopener noreferrer">
             <Icon.GooglePlay className="gp-icon" />
             <span className="gp-label">
               <small>{t.hero.googlePlay}</small>
