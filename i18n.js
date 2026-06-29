@@ -116,12 +116,15 @@ window.SM_I18N = {
     faq: {
       head: { eyebrow: "FAQ", title: "よくあるご質問" },
       items: [
-        { q: "アプリの利用は無料ですか？", a: "はい、SeichiMaps はすべての機能を無料でご利用いただけます。広告表示および任意の支援（投げ銭）にて運営しております。" },
-        { q: "iOS 版はいつリリースされますか？", a: "現在開発中です。リリース時期が決まり次第、本ページおよび公式 SNS にてお知らせします。" },
-        { q: "聖地スポットの追加リクエストはできますか？", a: "アプリ内の「リクエスト」ボタンから、追加してほしいスポットや作品をお送りいただけます。順次データベースに反映していきます。" },
-        { q: "公式スポットと非公式スポットの違いは？", a: "アニメ制作委員会や自治体が公式に「聖地」として認定している場所が公式スポット、ファンの間で広く認知されている場所が非公式スポットです。両方ともデータベース化しています。" },
-        { q: "オフラインでも使えますか？", a: "一部の機能（マップ表示など）にはインターネット接続が必要ですが、訪問済みスポットの記録はローカルにも保存されます。" },
-        { q: "ユーザー登録は必要ですか？", a: "未ログインでも基本機能はご利用いただけます。ログインすると、推しキャラ・訪問記録のクラウド同期や、他端末での引き継ぎが可能になります。" },
+        { q: "SeichiMapsは無料で使えますか？", a: "はい、現在は全機能を無料でご利用いただけます。一部機能について将来有料プランを検討中ですが、導入時には事前にお知らせいたします。" },
+        { q: "アカウント登録は必須ですか？", a: "いいえ、登録なしでも聖地の検索・閲覧はご利用いただけます。登録・ログインすることで、スポット・キャラの追加リクエストを送信できるなどの機能をご利用いただけます。" },
+        { q: "ログイン方法は何がありますか？", a: "メールアドレスによる登録、ログインに対応しています。" },
+        { q: "位置情報は取得されますか？", a: "いいえ、SeichiMapsはユーザーの位置情報を収集・利用しません。" },
+        { q: "対応言語は何語ですか？", a: "日本語と英語に対応しております。アプリ内の言語切り替え機能からお好みの言語でご利用いただけます。" },
+        { q: "聖地情報はどうやって検索できますか？", a: "マップ上での直接検索、アニメ作品名別検索、都道府県別検索の3つの方法で聖地を探すことができます。" },
+        { q: "聖地情報の誤りや追加はリクエストできますか？", a: "はい、アプリの「リクエスト」よりご連絡ください。追加されるか否か、いつ修正・追加されるかはお答えできません。確認後、順次対応いたします。" },
+        { q: "アカウントを削除したい場合は？", a: "アカウント削除はアプリのアンインストールで完了します。" },
+        { q: "お問い合わせはどこからできますか？", a: "アプリ内の「お問い合わせ」ページからお願いいたします。" },
       ],
     },
     finalCta: {
@@ -224,12 +227,15 @@ window.SM_I18N = {
     faq: {
       head: { eyebrow: "FAQ", title: "Frequently asked" },
       items: [
-        { q: "Is the app free?", a: "Yes — all features are free. We run on ads and optional donations from supporters." },
-        { q: "When does iOS launch?", a: "It's in development. We'll announce the launch on this page and our official social channels as soon as it's ready." },
-        { q: "Can I request a new spot?", a: "Yes. Tap the 'Request' button inside the app to send us new spots or anime — we add them in batches." },
-        { q: "Official vs. fan-curated spots?", a: "'Official' spots are those recognized by anime production committees or local governments. 'Fan-curated' are widely recognized by the community. We catalog both." },
-        { q: "Does it work offline?", a: "Some features (like the map) require internet, but your visit records are stored locally as well." },
-        { q: "Do I need an account?", a: "Core features work without an account. Sign in to sync your characters and visit logs across devices." },
+        { q: "Is SeichiMaps free to use?", a: "Yes — all features are currently free. We are considering paid plans for some features in the future, and will give advance notice before introducing them." },
+        { q: "Do I need to create an account?", a: "No. You can search and browse pilgrimage spots without registering. Signing in unlocks features such as submitting requests to add spots or characters." },
+        { q: "What login methods are available?", a: "Registration and login via email address are supported." },
+        { q: "Is my location data collected?", a: "No. SeichiMaps does not collect or use your location data." },
+        { q: "What languages are supported?", a: "Japanese and English. You can switch to your preferred language from the in-app language toggle." },
+        { q: "How can I search for spots?", a: "You can find spots in three ways: searching directly on the map, by anime title, or by prefecture." },
+        { q: "Can I request corrections or additions to spots?", a: "Yes — contact us via 'Request' in the app. We cannot promise whether or when an entry will be corrected or added, but we review and address requests in order." },
+        { q: "How do I delete my account?", a: "Deleting your account is completed simply by uninstalling the app." },
+        { q: "Where can I contact you?", a: "Please use the 'Contact' page inside the app." },
       ],
     },
     finalCta: {
