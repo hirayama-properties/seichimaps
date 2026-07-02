@@ -301,16 +301,18 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  background: var(--c-bg-2);
-  color: var(--c-ink-2);
+  background: var(--c-ink);
+  color: var(--c-bg);
   padding: 12px 22px 12px 18px;
   border-radius: var(--r-md);
-  border: 1px dashed var(--c-line-2);
   position: relative;
+  transition: transform .2s, box-shadow .2s;
 }
+.btn-ios:hover { transform: translateY(-1px); box-shadow: var(--shadow-md); }
 .btn-ios .gp-icon { width: 24px; height: 28px; }
-.btn-ios .gp-label small { font-size: 10px; font-family: var(--font-en); font-weight: 500; letter-spacing: 0.04em; }
-.btn-ios .gp-label strong { font-size: 14px; font-weight: 700; letter-spacing: -0.01em; }
+.btn-ios .gp-label { display: flex; flex-direction: column; line-height: 1.1; text-align: left; }
+.btn-ios .gp-label small { font-size: 10px; font-family: var(--font-en); font-weight: 500; opacity: 0.85; letter-spacing: 0.04em; }
+.btn-ios .gp-label strong { font-size: 17px; font-family: var(--font-en); font-weight: 700; letter-spacing: 0.01em; }
 .coming-badge {
   position: absolute;
   top: -8px; right: -8px;
@@ -1102,6 +1104,9 @@ section.section {
     radial-gradient(circle at 20% 80%, rgba(217, 119, 87, 0.18) 0%, transparent 40%);
 }
 .ios-card > * { position: relative; z-index: 1; }
+/* Button sits on the dark card — invert to white so it stays visible */
+.ios-card .btn-ios { background: #fff; color: var(--c-ink); }
+.ios-card .btn-ios .gp-label small { opacity: 0.7; }
 .ios-card .ios-eyebrow {
   display: inline-flex;
   align-items: center;
