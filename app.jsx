@@ -185,13 +185,12 @@ function Hero({ t }) {
                   <strong>{t.hero.googlePlayBig}</strong>
                 </span>
               </a>
-              <a className="btn-ios" href="#ios" onClick={(e) => { e.preventDefault(); document.getElementById("ios")?.scrollIntoView({behavior:"smooth"}); }}>
+              <a className="btn-ios" href="https://apps.apple.com/us/app/seichimaps/id6783220882" target="_blank" rel="noopener noreferrer">
                 <Icon.Apple className="gp-icon" />
                 <span className="gp-label">
                   <small>{t.hero.ios}</small>
                   <strong>{t.hero.iosBig}</strong>
                 </span>
-                <span className="coming-badge">{t.hero.comingSoon}</span>
               </a>
             </div>
             <div className="hero-meta">
@@ -426,6 +425,13 @@ function IosComing({ t, enabled }) {
             <div className="ios-eyebrow">● {t.ios.eyebrow}</div>
             <h3>{t.ios.title}</h3>
             <p>{t.ios.desc}</p>
+            <a className="btn-ios" href="https://apps.apple.com/us/app/seichimaps/id6783220882" target="_blank" rel="noopener noreferrer" style={{marginTop:"24px"}}>
+              <Icon.Apple className="gp-icon" />
+              <span className="gp-label">
+                <small>{t.hero.ios}</small>
+                <strong>{t.hero.iosBig}</strong>
+              </span>
+            </a>
           </div>
           <div className="ios-illust">
             <div className="ios-glow" />
@@ -499,13 +505,12 @@ function FinalCta({ t }) {
               <strong>{t.hero.googlePlayBig}</strong>
             </span>
           </a>
-          <a className="btn-ios" href="#ios" onClick={(e) => { e.preventDefault(); document.getElementById("ios")?.scrollIntoView({behavior:"smooth"}); }}>
+          <a className="btn-ios" href="https://apps.apple.com/us/app/seichimaps/id6783220882" target="_blank" rel="noopener noreferrer">
             <Icon.Apple className="gp-icon" />
             <span className="gp-label">
               <small>{t.hero.ios}</small>
               <strong>{t.hero.iosBig}</strong>
             </span>
-            <span className="coming-badge">{t.hero.comingSoon}</span>
           </a>
         </div>
         <p style={{ fontSize: 12, color: "var(--c-ink-3)", maxWidth: 620, margin: "40px auto 0", lineHeight: 1.7 }} className="reveal" data-delay="3">
