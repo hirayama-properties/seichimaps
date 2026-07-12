@@ -3,6 +3,17 @@ const { useState, useEffect, useRef, useMemo } = React;
 
 // Resource resolver — uses window.__resources (blob URLs) when present (standalone bundle),
 // otherwise returns the original path.
+const STORE_LINKS = {
+  ja: {
+    ios: "https://apps.apple.com/jp/app/seichimaps-%E3%82%A2%E3%83%8B%E3%83%A1%E8%81%96%E5%9C%B0%E5%B7%A1%E7%A4%BC%E3%83%9E%E3%83%83%E3%83%97/id6783220882",
+    android: "https://play.google.com/store/apps/details?id=com.seichimaps.app",
+  },
+  en: {
+    ios: "https://apps.apple.com/us/app/seichimaps-anime-pilgrimage/id6783220882",
+    android: "https://play.google.com/store/apps/details?id=com.seichimaps.app&hl=en",
+  },
+};
+
 const R = (path) => {
   if (!path) return path;
   const map = (typeof window !== "undefined" && window.__resources) || null;
@@ -158,7 +169,7 @@ function Nav({ lang, setLang, t }) {
 // =========================
 // Hero
 // =========================
-function Hero({ t }) {
+function Hero({ t, lang }) {
   return (
     <section className="hero" id="top">
       <div className="hero-bg">
@@ -178,14 +189,14 @@ function Hero({ t }) {
             </h1>
             <p className="hero-lede">{t.hero.lede}</p>
             <div className="hero-ctas" id="download">
-              <a className="btn-gplay" href="https://play.google.com/store/apps/details?id=com.seichimaps.app" target="_blank" rel="noopener noreferrer">
+              <a className="btn-gplay" href={STORE_LINKS[lang].android} target="_blank" rel="noopener noreferrer">
                 <Icon.GooglePlay className="gp-icon" />
                 <span className="gp-label">
                   <small>{t.hero.googlePlay}</small>
                   <strong>{t.hero.googlePlayBig}</strong>
                 </span>
               </a>
-              <a className="btn-ios" href="https://apps.apple.com/us/app/seichimaps/id6783220882" target="_blank" rel="noopener noreferrer">
+              <a className="btn-ios" href={STORE_LINKS[lang].ios} target="_blank" rel="noopener noreferrer">
                 <Icon.Apple className="gp-icon" />
                 <span className="gp-label">
                   <small>{t.hero.ios}</small>
@@ -415,7 +426,7 @@ function News({ t, enabled }) {
 // =========================
 // iOS coming
 // =========================
-function IosComing({ t, enabled }) {
+function IosComing({ t, lang, enabled }) {
   if (!enabled) return null;
   return (
     <section className="ios-section" id="ios">
@@ -425,7 +436,7 @@ function IosComing({ t, enabled }) {
             <div className="ios-eyebrow">● {t.ios.eyebrow}</div>
             <h3>{t.ios.title}</h3>
             <p>{t.ios.desc}</p>
-            <a className="btn-ios" href="https://apps.apple.com/us/app/seichimaps/id6783220882" target="_blank" rel="noopener noreferrer" style={{marginTop:"24px"}}>
+            <a className="btn-ios" href={STORE_LINKS[lang].ios} target="_blank" rel="noopener noreferrer" style={{marginTop:"24px"}}>
               <Icon.Apple className="gp-icon" />
               <span className="gp-label">
                 <small>{t.hero.ios}</small>
@@ -491,21 +502,21 @@ function Faq({ t, enabled }) {
 // =========================
 // Final CTA
 // =========================
-function FinalCta({ t }) {
+function FinalCta({ t, lang }) {
   return (
     <section className="final-cta" id="cta">
       <div className="container">
         <h2 className="reveal">{t.finalCta.title}</h2>
         <p className="reveal" data-delay="1">{t.finalCta.lede}</p>
         <div className="hero-ctas reveal" data-delay="2">
-          <a className="btn-gplay" href="https://play.google.com/store/apps/details?id=com.seichimaps.app" target="_blank" rel="noopener noreferrer">
+          <a className="btn-gplay" href={STORE_LINKS[lang].android} target="_blank" rel="noopener noreferrer">
             <Icon.GooglePlay className="gp-icon" />
             <span className="gp-label">
               <small>{t.hero.googlePlay}</small>
               <strong>{t.hero.googlePlayBig}</strong>
             </span>
           </a>
-          <a className="btn-ios" href="https://apps.apple.com/us/app/seichimaps/id6783220882" target="_blank" rel="noopener noreferrer">
+          <a className="btn-ios" href={STORE_LINKS[lang].ios} target="_blank" rel="noopener noreferrer">
             <Icon.Apple className="gp-icon" />
             <span className="gp-label">
               <small>{t.hero.ios}</small>
@@ -607,15 +618,15 @@ function App() {
   return (
     <>
       <Nav lang={lang} setLang={setLang} t={t} />
-      <Hero t={t} />
+      <Hero t={t} lang={lang} />
       <Marquee items={t.marquee} />
       <Features t={t} enabled={tw.showFeatures} />
       <ForWho t={t} enabled={tw.showForWho} />
       <Voices t={t} enabled={tw.showVoices} />
       <News t={t} enabled={tw.showNews} />
-      <IosComing t={t} enabled={tw.showIos} />
+      <IosComing t={t} lang={lang} enabled={tw.showIos} />
       <Faq t={t} enabled={tw.showFaq} />
-      <FinalCta t={t} />
+      <FinalCta t={t} lang={lang} />
       <Footer t={t} />
     </>
   );
